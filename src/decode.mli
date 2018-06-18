@@ -4,9 +4,9 @@ type value
 
 type 'a decoder
 
-val decode_string : 'a decoder -> string -> ('a, string) Belt.Result.t
+val decode_string : 'a decoder -> string -> ('a, string) BsOakBase.Result.t
 
-val decode_value : 'a decoder -> value -> ('a, string) Belt.Result.t
+val decode_value : 'a decoder -> value -> ('a, string) BsOakBase.Result.t
 
 (* Primitive Decoders *)
 
