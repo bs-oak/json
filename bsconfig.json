@@ -1,6 +1,6 @@
 {
   "name": "@bs-oak/json",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "sources": {
     "dir": "src",
     "subdirs": true
@@ -11,9 +11,7 @@
   },
   "suffix": ".bs.js",
   "namespace": true,
-  "bs-dependencies": [
-    "@bs-oak/base"
-  ],
+  "bs-dependencies": [],
   "bs-dev-dependencies": [
     "@glennsl/bs-jest"
   ],

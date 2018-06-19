@@ -20,16 +20,16 @@ let value_to_string v =
 
 let decode_value decode v =
   try
-    BsOakBase.Result.Ok (decode v)
+    Belt.Result.Ok (decode v)
   with
-    Failure msg -> BsOakBase.Result.Error msg
+    Failure msg -> Belt.Result.Error msg
 
 let decode_string decode json_str =
   try 
     let value = Js.Json.parseExn json_str in
     decode_value decode value
   with
-    _ -> BsOakBase.Result.Error ( Printf.sprintf "failed to decode json string: %s" json_str )
+    _ -> Belt.Result.Error ( Printf.sprintf "failed to decode json string: %s" json_str )
 
 (* Primitive Decoders *)
 
