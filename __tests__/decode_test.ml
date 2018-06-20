@@ -231,4 +231,19 @@ let () = describe "Decode" (fun () ->
             expect (Decode.decode_string decoder json) |> toEqual( Belt.Result.Ok ("tom", 43) )
         );
     );
+
+    describe "#|:" (fun () -> 
+        test "maps decoder values to function" (fun () -> 
+            let open Decode in
+            let json = {| { "name": "tom", "age" : 43 } |} in
+            let new_user name age = (name, age) in
+            let decoder =
+                succeed new_user
+                    |: (field "name" string)
+                    |: (field "age" int)
+            in
+            expect (decode_string decoder json) |> toEqual( Belt.Result.Ok ("tom", 43) )
+        );
+    );
+
 )

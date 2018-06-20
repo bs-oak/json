@@ -217,4 +217,5 @@ let and_then to_decoder decoder v =
 let and_map d1 d2 = 
   and_then (fun f -> map f d1) d2
 
-let (|:) = and_map
+let (|:) d1 d2 =
+  and_map d2 d1

@@ -125,4 +125,4 @@ val and_then : ('a -> 'b decoder) -> 'a decoder -> 'b decoder
 
 val and_map : 'a decoder -> ('a -> 'b) decoder -> 'b decoder
 
-val (|:) : 'a decoder -> ('a -> 'b) decoder -> 'b decoder
+val (|:) : ('a -> 'b) decoder -> 'a decoder -> 'b decoder
