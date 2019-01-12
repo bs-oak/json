@@ -1,6 +1,6 @@
 {
   "name": "@bs-oak/json",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "scripts": {
     "clean": "bsb -clean-world",
     "build": "bsb -make-world",
