@@ -13,7 +13,7 @@ let float v =
   Js.Json.number v
 
 let bool v =
-  Js.Json.boolean (Js.Boolean.to_js_boolean v)
+  Js.Json.boolean v
 
 let null =
   Js.Json.null
