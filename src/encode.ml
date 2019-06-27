@@ -1,7 +1,7 @@
 type value = Js.Json.t
 
-let encode _space v =
-  Js.Json.stringify v 
+let encode space v =
+  Js.Json.stringifyWithSpace v space
 
 let string v = 
   Js.Json.string v
